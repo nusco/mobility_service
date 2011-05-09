@@ -1,0 +1,33 @@
+<project name="3cube" default="stubs" basedir=".">
+	<path id="ws.classpath">
+		<fileset dir="../platform/jaxb-ri-20110412">
+			<include name="**/*.jar"/>
+		</fileset>
+
+		<fileset dir="../platform/metro-2.1">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="stubs" description="Builds the Java artifacts from the WSDL files">
+		<taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+			<classpath refid="ws.classpath"/>
+		</taskdef>
+
+		<wsimport
+			wsdl="./contracts/NotificationService.wsdl"
+			destdir="./stubs"
+			xendorsed="true"
+			keep="true"
+			sourcedestdir="./gen"
+		/>
+
+		<wsimport
+			wsdl="./contracts/MobilityService.wsdl"
+			destdir="./stubs"
+			xendorsed="true"
+			keep="true"
+			sourcedestdir="./gen"
+		/>
+	</target>
+</project>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="MISMMessages"
+    targetNamespace="http://schemas.mism.mobi/Messages/Notification"
+    elementFormDefault="qualified"
+    xmlns="http://schemas.mism.mobi/Messages/Notification"
+	xmlns:m="http://schemas.mism.mobi/Messages/Mobility"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:import namespace="http://schemas.mism.mobi/Messages/Mobility"
+				schemaLocation="MobilityMessages.xsd" />
+	
+	<xsd:complexType name="LineDelay">
+		<xsd:annotation>
+			<xsd:documentation>
+
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="line" type="m:Line" />
+			<xsd:element name="delay" type="m:Delay" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="NotifyDelayRequest" type="LineDelay">
+		<xsd:annotation>
+			<xsd:documentation>
+
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+</xsd:schema>
