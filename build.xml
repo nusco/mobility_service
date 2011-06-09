@@ -1,0 +1,66 @@
+<project name="3cube" default="all" basedir=".">
+	<path id="ws.classpath">
+		<fileset dir="../platform/jaxb-ri-20110412">
+			<include name="**/*.jar"/>
+		</fileset>
+
+		<fileset dir="../platform/metro-2.1">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="clean" description="Resets the build to a clean state.">
+		<delete dir="./classes"/>
+		<delete dir="./gen"/>
+	</target>
+	
+	<target name="prepare" description="Creates the build directories.">
+		<mkdir dir="./classes"/>
+		<mkdir dir="./gen"/>
+	</target>
+	
+	<target
+		name="stubs"
+		description="Builds the Java artifacts from the WSDL files."
+	>
+		<taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+			<classpath refid="ws.classpath"/>
+		</taskdef>
+
+		<wsimport
+			wsdl="./contracts/NotificationService.wsdl"
+			destdir="./classes"
+			xendorsed="true"
+			keep="true"
+			sourcedestdir="./gen"
+		/>
+
+		<wsimport
+			wsdl="./contracts/MobilityService.wsdl"
+			destdir="./classes"
+			xendorsed="true"
+			keep="true"
+			sourcedestdir="./gen"
+		/>
+	</target>
+	
+	<target
+		name="compile"
+		description="Compiles our Java source files."
+	>
+		<javac
+			srcdir="./src"
+			destdir="./classes"
+			includes="**/*.java"
+			classpathref="ws.classpath"
+			compiler="modern"
+		>
+		</javac>
+	</target>
+
+	<target
+		name="all"
+		description="Builds the entire project."
+		depends="clean, prepare, stubs, compile"
+	/>
+</project>
