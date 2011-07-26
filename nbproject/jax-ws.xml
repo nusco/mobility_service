@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="MobilityService">
+      <implementation-class>mobi.mism.MobilityService</implementation-class>
+      <wsdl-url>file:/D:/mobility_service/mobility_service/contracts/MobilityService.wsdl</wsdl-url>
+      <local-wsdl-file>MobilityService.wsdl</local-wsdl-file>
+      <service-name>MobilityService</service-name>
+      <port-name>BasicHttpBinding_MobilityServiceInterface</port-name>
+      <package-name>mobi.mism.services.mobilityservice</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
+    <service name="NotificationService">
+      <implementation-class>mobi.mism.NotificationService</implementation-class>
+      <wsdl-url>file:/D:/mobility_service/mobility_service/contracts/NotificationService.wsdl</wsdl-url>
+      <local-wsdl-file>NotificationService.wsdl</local-wsdl-file>
+      <service-name>NotificationService</service-name>
+      <port-name>BasicHttpBinding_NotificationServiceInterface</port-name>
+      <package-name>mobi.mism.services.notificationservice</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>false</jsr109>
+</jax-ws>

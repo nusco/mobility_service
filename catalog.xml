@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/D:/mobility_service/mobility_service/contracts/MobilityService.wsdl" uri="src/conf/xml-resources/web-services/MobilityService/wsdl/MobilityService.wsdl"/>
+    <system systemId="file:/D:/mobility_service/mobility_service/contracts/NotificationService.wsdl" uri="src/conf/xml-resources/web-services/NotificationService/wsdl/NotificationService.wsdl"/>
+    <system systemId="file:/D:/mobility_service/mobility_service/contracts/NotificationMessages.xsd" uri="src/conf/xml-resources/web-services/NotificationService/wsdl/NotificationMessages.xsd"/>
+    <system systemId="file:/D:/mobility_service/mobility_service/contracts/MobilityMessages.xsd" uri="src/conf/xml-resources/web-services/NotificationService/wsdl/MobilityMessages.xsd"/>
+</catalog>
